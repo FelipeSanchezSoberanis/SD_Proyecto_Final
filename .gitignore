@@ -2,3 +2,4 @@
 !*.vhd
 !*.ucf
 !.gitignore
+!*.ucf
