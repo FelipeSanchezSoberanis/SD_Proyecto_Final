@@ -7,7 +7,8 @@ entity TOP_MODULE is
         clk: in std_logic;
         LED: out std_logic_vector(6 downto 0);
         an: out std_logic;
-        PWM: out std_logic
+        PWM: out std_logic;
+        reset: in std_logic
     );
 end TOP_MODULE;
 
@@ -31,7 +32,7 @@ architecture TOP_MODULE_ARCH of TOP_MODULE is
     component BLOCK_PWM is
         Port(
             in_PWM: in std_logic_vector(7 downto 0);
-            clk: in std_logic;
+            clk, reset: in std_logic;
             out_PWM: out std_logic
         );
     end component;
@@ -54,6 +55,7 @@ begin
     U2: BLOCK_PWM port map(
         in_PWM => cable2,
         clk => clk,
-        out_PWM => PWM
+        out_PWM => PWM,
+        reset => reset
     );
 end TOP_MODULE_ARCH;

@@ -11,7 +11,8 @@ architecture behavior of TB_TOP_MODULE is
          clk: in std_logic;
          LED: out std_logic_vector(6 downto 0);
          an: out std_logic;
-         PWM: out std_logic
+         PWM: out std_logic;
+         reset: in std_logic
       );
    end component;
 
@@ -20,6 +21,7 @@ architecture behavior of TB_TOP_MODULE is
    signal LED: std_logic_vector(6 downto 0);
    signal an: std_logic;
    signal PWM: std_logic;
+   signal reset: std_logic := '0';
 
    constant clockFrequency: integer := 15000;
    constant clockPeriod: time := 1000 ms / clockFrequency;
@@ -31,7 +33,8 @@ begin
       clk => clk,
       LED => LED,
       an => an,
-      PWM => PWM
+      PWM => PWM,
+      reset => reset
    );
 
 in_TOP_MODULE <= "00000000",

@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity BLOCK_PWM is
     Port(
         in_PWM: in std_logic_vector(7 downto 0);
-        clk: in std_logic;
+        clk, reset: in std_logic;
         out_PWM: out std_logic
     );
 end BLOCK_PWM;
@@ -14,9 +14,13 @@ architecture BLOCK_PWM_ARCH of BLOCK_PWM is
     signal counterLow: integer := 15;
     signal tempCounterLow: integer := 1;
 begin
-    process(clk, in_PWM)
+    process(clk, in_PWM, reset)
     begin
-        if rising_edge(clk) then
+        if reset = '1' then
+            tempOut <= '1';
+            tempCounterLow <= 1;
+            counterLow <= 15;
+        elsif rising_edge(clk) then
             tempCounterLow <= tempCounterLow + 1;
             if tempCounterLow = counterLow then
                 tempOut <= '0';

@@ -13,6 +13,8 @@ NET    "PWM"                 LOC = P4;
 
 NET    "clk"                 LOC = P54;
 
+NET    "reset"               LOC = P69;
+
 # ? Qué pins se deben de poner como entrada?
 NET    "in_TOP_MODULE<0>"    LOC = P111;
 NET    "in_TOP_MODULE<1>"    LOC = P114;
