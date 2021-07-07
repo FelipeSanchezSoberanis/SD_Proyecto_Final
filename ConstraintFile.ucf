@@ -8,19 +8,19 @@ NET    "LED<6>"              LOC = P83;
 
 NET    "an"                  LOC = P34;
 
-# Qué pin se debe de poner de salida?
-NET    "PWM"                 LOC = P4;
+
+NET    "PWM"                 LOC = P15;
 
 NET    "clk"                 LOC = P54;
 
-NET    "reset"               LOC = P69;
+NET    "reset"               LOC = P58;
 
-# ? Qué pins se deben de poner como entrada?
-NET    "in_TOP_MODULE<0>"    LOC = P111;
-NET    "in_TOP_MODULE<1>"    LOC = P114;
-NET    "in_TOP_MODULE<2>"    LOC = P119;
-NET    "in_TOP_MODULE<3>"    LOC = P120;
-NET    "in_TOP_MODULE<4>"    LOC = P128;
-NET    "in_TOP_MODULE<5>"    LOC = P130;
-NET    "in_TOP_MODULE<6>"    LOC = P125;
-NET    "in_TOP_MODULE<7>"    LOC = P126;
+
+NET    "in_TOP_MODULE<0>"    LOC = P38;
+NET    "in_TOP_MODULE<1>"    LOC = P36;
+NET    "in_TOP_MODULE<2>"    LOC = P29;
+NET    "in_TOP_MODULE<3>"    LOC = P24;
+NET    "in_TOP_MODULE<4>"    LOC = P18;
+NET    "in_TOP_MODULE<5>"    LOC = P12;
+NET    "in_TOP_MODULE<6>"    LOC = P10;
+NET    "in_TOP_MODULE<7>"    LOC = P6;
